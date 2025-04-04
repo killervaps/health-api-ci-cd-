@@ -61,6 +61,6 @@ jobs:
     - name: Install Railway CLI (new) & Deploy
       run: |
         npm install -g @railway/cli
-        railway up --service health-api-ci-cd
+        railway up --service health-api-ci-cd-
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
