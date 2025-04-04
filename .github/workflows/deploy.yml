@@ -58,9 +58,9 @@ jobs:
         echo "Branch: ${{ github.ref }}"
         echo "Repository: ${{ github.repository }}"
 
-    - name: Install Railway CLI & Deploy
+    - name: Install Railway CLI (new) & Deploy
       run: |
-        npm install -g railway
+        npm install -g @railway/cli
         railway login --token $RAILWAY_TOKEN
         railway up
       env:
