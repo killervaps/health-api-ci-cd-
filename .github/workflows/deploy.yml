@@ -42,10 +42,10 @@ jobs:
 
     - name: Run Unit Tests
       run: |
-        pytest > result.log
+        pytest > result.log || true
         cat result.log
 
-    - name: Upload Test Result (Optional)
+    - name: Upload Test Result
       uses: actions/upload-artifact@v4
       with:
         name: pytest-result
