@@ -58,9 +58,10 @@ jobs:
         echo "Branch: ${{ github.ref }}"
         echo "Repository: ${{ github.repository }}"
 
-    - name: Deploy to Railway
-      uses: railwayapp/cli@v1
-      with:
-        command: up
+    - name: Install Railway CLI & Deploy
+      run: |
+        npm install -g railway
+        railway login --token $RAILWAY_TOKEN
+        railway up
       env:
         RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
