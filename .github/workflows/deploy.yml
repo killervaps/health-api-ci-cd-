@@ -31,7 +31,7 @@ jobs:
 
       - name: Run pytest
         run: |
-          pytest > result.log || true
+          pytest > result.log 
           cat result.log
 
       - name: Upload test result
