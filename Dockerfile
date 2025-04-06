@@ -11,7 +11,7 @@ RUN pip install --upgrade pip && \
     pip install --prefix=/install -r requirements.txt
 
 # Salin source code
-COPY main.py .
+COPY mainn.py .
 
 # ========== STAGE 2: RUNTIME ==========
 FROM python:3.10-slim
