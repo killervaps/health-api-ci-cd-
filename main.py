@@ -11,7 +11,7 @@ def health():
     return {
         "nama": "Valensio Arvin Putra Setiawan",
         "nrp": "5025231273",
-        "status": "UP",
+        "status": "DOWN",
         "timestamp": datetime.now().isoformat(),
         "uptime": uptime
     }
