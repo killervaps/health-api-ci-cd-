@@ -5,7 +5,7 @@ import time
 start_time = time.time()
 app = FastAPI()
 
-@app.get("/health")
+@app.get("/health-check")
 def health():
     uptime = str(timedelta(seconds=int(time.time() - start_time)))
     return {
